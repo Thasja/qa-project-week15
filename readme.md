@@ -1,4 +1,4 @@
-# Creating automation tests fot the following demo web page: https://www.saucedemo.com/.
+# Creating automation tests for the following demo web page: https://www.saucedemo.com/.
 
 **This repository contains automation tests for the given website following the instruccions of the previous lessons as a final examen**
 
