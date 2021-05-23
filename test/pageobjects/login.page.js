@@ -6,7 +6,7 @@ class LoginPage extends Page {
     get inputPassword () { return $('#password') }
     get loginButton () { return $('#login-button') }
     get errormessageContainer () { return $('#login_button_container') }
-    get closeErrorMessageBtn () {return $('#login_button_container > div > form > div.error-message-container.error > h3 > button > svg') }
+    get closeErrorMessageBtn () {return $('#login_button_container > div > form > div.error-message-container.error > h3 > button > svg > path') }
 
     /**
      * a method to encapsule automation code to interact with the page
