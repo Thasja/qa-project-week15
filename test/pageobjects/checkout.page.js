@@ -8,11 +8,11 @@ class CheckoutPage extends Page {
 	
     get cancelBtn () {return $('#cancel') }
     get continueBtn () {return $('#continue') }
-	get errorContainer () {return $('#checkout_info_container') }
+	get errorContainer () {return $('//*[@id="checkout_info_container"]/div/form/div[1]/div[4]') }
 
+    get summaryTotalContainer () {return $('#checkout_summary_container > div > div.summary_info > div.summary_total_label') }
     get finishBtn () {return $('#finish') }
 	get backHomeBtn () {return $('#back-to-products') }
-    get summaryContainer () {return $('#checkout_summary_container') }
 
 
     open () {
