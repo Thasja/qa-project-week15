@@ -4,7 +4,7 @@
   "description": "**This repository contains automation tests for the given website following the instruccions of the previous lessons as a final examen**",
   "main": "index.js",
   "scripts": {
-    "test": "npx wdio run ./wdio.conf.js --spec TestProducts.js"
+    "test": "npx wdio run ./wdio.conf.js --spec TestEtoE.js"
   },
   "repository": {
     "type": "git",

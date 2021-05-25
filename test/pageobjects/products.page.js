@@ -30,12 +30,19 @@ class ProductsPage extends Page {
     get removeFromCartPr6 () { return $('//*[@id="remove-test.allthethings()-t-shirt-(red)"]') }
 
     get sortByBtn () { return $('.product_sort_container') }
-    get sortByNameAz () { return $('span > select > option:nth-child(1)') }
-    get sortByNameZa() { return $('span > select > option:nth-child(2)') }
-    get sortByLowToHigh () { return $('span > select > option:nth-child(3)') }
-    get sortByHighToLow () { return $('span > select > option:nth-child(4)') }
+    get sortByNameAz () { return $('//*[@id="header_container"]/div[2]/div[2]/span/select/option[1]') }
+    get sortByNameZa() { return $('//*[@id="header_container"]/div[2]/div[2]/span/select/option[2]') }
+    get sortByPriceLoHi () { return $('//*[@id="header_container"]/div[2]/div[2]/span/select/option[3]') }
+    get sortByPriceHiLo () { return $('//*[@id="header_container"]/div[2]/div[2]/span/select/option[4]') }
 
     get cartContainer () { return $('#shopping_cart_container > a') }
+    get burgerBtn () { return $('#react-burger-menu-btn') }
+    get burgerBtnCross () { return $('#react-burger-cross-btn') }
+    get sideBar () { return $('#menu_button_container') }
+    get allItemsBtn () { return $('#inventory_sidebar_link') }
+    get aboutBtn () { return $('#about_sidebar_link') }
+    get logOutBtn () { return $('#logout_sidebar_link') }
+    get resetBtn () { return $('#reset_sidebar_link') }
 
     open () {
         return super.open('inventory.html');
