@@ -14,15 +14,6 @@ describe('login page input Username', () => {
         expect(LoginPage.errormessageContainer).toHaveText('Epic sadface: Username is required');
     });
 
-    /*it('Error message container box should be closed', () => {
-        browser.refresh();
-        LoginPage.inputUsername.setValue('');
-        LoginPage.inputPassword.setValue('secret_sauce');
-        LoginPage.loginButton.click();
-        LoginPage.closeErrorMessageBtn.click();
-        expect(LoginPage.errormessageContainer).toBeDisplayedInViewport();
-    });*/
-
     it('Error message should show when entering nothing in input Password', () => {
         browser.refresh();
         LoginPage.inputUsername.setValue('standard_user');
@@ -47,7 +38,17 @@ describe('login page input Username', () => {
         expect(LoginPage.errormessageContainer).toHaveText('Epic sadface: Username and password do not match any user in this service');
     });
 
-    it('Error message should show when entering valid data in username and password field', () => {
+    it('Error message container should not be displayed when clicking the cross', () => {
+        browser.refresh();
+        LoginPage.inputUsername.setValue('');
+        LoginPage.inputPassword.setValue('xxx');
+        LoginPage.loginButton.click();
+        LoginPage.closeErrorMessageBtn.click();
+        expect(LoginPage.errormessageContainer).not.toBeDisplayed();
+    });
+
+
+    it('Clicking login button should redirect to products page', () => {
         browser.refresh();
         LoginPage.inputUsername.setValue('standard_user');
         LoginPage.inputPassword.setValue('secret_sauce');

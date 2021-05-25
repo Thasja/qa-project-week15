@@ -38,7 +38,7 @@ class ProductsPage extends Page {
     get cartContainer () { return $('#shopping_cart_container > a') }
     get burgerBtn () { return $('#react-burger-menu-btn') }
     get burgerBtnCross () { return $('#react-burger-cross-btn') }
-    get sideBar () { return $('#menu_button_container') }
+    get sideBar () { return $('#menu_button_container > div > div.bm-menu-wrap > div.bm-menu') }
     get allItemsBtn () { return $('#inventory_sidebar_link') }
     get aboutBtn () { return $('#about_sidebar_link') }
     get logOutBtn () { return $('#logout_sidebar_link') }

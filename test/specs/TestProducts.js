@@ -164,26 +164,26 @@ describe('When clicking on "REMOVE" button, cart should be decreased with 1', ()
 describe('When clicking sort menu, it should sort the products by name or price', () => {
 
     it('Clicking on NAME (A TO Z)', () => {
-        ProductsPage.sortByBtn.click ()
-        ProductsPage.sortByNameAz.click ()
+        ProductsPage.sortByBtn.click();
+        ProductsPage.sortByNameAz.click();
         expect(ProductsPage.sortByNameAz).toHaveText('Name (A to Z)');
     });
 
     it('Clicking on NAME (Z TO A)', () => {
-        ProductsPage.sortByBtn.click ()
-        ProductsPage.sortByNameZa.click ()
+        ProductsPage.sortByBtn.click();
+        ProductsPage.sortByNameZa.click();
         expect(ProductsPage.sortByNameZa).toHaveText('Name (Z to A)');
     });
 
     it('Clicking on PRICE (low to high)', () => {
-        ProductsPage.sortByBtn.click ()
-        ProductsPage.sortByPriceLoHi.click ()
+        ProductsPage.sortByBtn.click();
+        ProductsPage.sortByPriceLoHi.click();
         expect(ProductsPage.sortByPriceLoHi).toHaveText('Price (low to high)');
     });
 
     it('Clicking on PRICE (high to low)', () => {
-        ProductsPage.sortByBtn.click ()
-        ProductsPage.sortByPriceHiLo.click ()
+        ProductsPage.sortByBtn.click();
+        ProductsPage.sortByPriceHiLo.click();
         expect(ProductsPage.sortByPriceHiLo).toHaveText('Price (high to low)');
     });
 });
@@ -200,43 +200,41 @@ describe('test cart container button', () => {
 describe('When clicking on burger button, nav bar should show', () => {
 
     it('Clicking on Burger button', () => {
-        ProductsPage.burgerBtn.click ()
+        ProductsPage.burgerBtn.click()
         expect(ProductsPage.sideBar).toBeDisplayed();
-        ProductsPage.burgerBtnCross.click ()
     });
 
-    /*it('Clicking on the cross of nav bar', () => {
-        ProductsPage.burgerBtn.click ()
-        ProductsPage.burgerBtnCross.click ()
+    it('Clicking on the cross of nav bar', () => {
+        ProductsPage.burgerBtnCross.click();
         expect(ProductsPage.sideBar).not.toBeDisplayed();
-    });*/
+    });
 
     it('Clicking on All Items', () => {
-        ProductsPage.burgerBtn.click ()
-        ProductsPage.allItemsBtn.click ()
+        ProductsPage.burgerBtn.click();
+        ProductsPage.allItemsBtn.click();
         expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html');
-        ProductsPage.burgerBtnCross.click ()
+        ProductsPage.burgerBtnCross.click();
     });
 
     it('Clicking on About', () => {
-        ProductsPage.burgerBtn.click ()
-        ProductsPage.aboutBtn.click ()
+        ProductsPage.burgerBtn.click();
+        ProductsPage.aboutBtn.click();
         expect(browser).toHaveUrl('https://saucelabs.com/');
         browser.back();
     });
 
     it('Clicking on Reset app state', () => {
-        ProductsPage.burgerBtn.click ()
+        ProductsPage.burgerBtn.click();
         ProductsPage.addToCartPr2.click();
         ProductsPage.addToCartPr4.click();
-        ProductsPage.resetBtn.click ()
+        ProductsPage.resetBtn.click();
         expect(ProductsPage.cartContainer).toHaveText('');
-        ProductsPage.burgerBtnCross.click ()
+        ProductsPage.burgerBtnCross.click();
     });
 
     it('Clicking on Logout', () => {
-        ProductsPage.burgerBtn.click ()
-        ProductsPage.logOutBtn.click ()
+        ProductsPage.burgerBtn.click();
+        ProductsPage.logOutBtn.click();
         expect(browser).toHaveUrl('https://www.saucedemo.com/');
     });
 });
